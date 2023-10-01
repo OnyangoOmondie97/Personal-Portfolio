@@ -353,21 +353,14 @@ ul.icons {
   position: relative;
   text-align: center;
   width: 100%; }
-  #banner input, #banner select, #banner textarea {
+  #banner input, #banner textarea {
     color: #ffffff; }
   #banner a {
     color: #ce1b28; }
   #banner strong, #banner b {
     color: #ffffff; }
-  #banner h1, #banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
+  #banner h1, #banner h2, #banner h3, #banner h4 {
     color: #ffffff; }
-  #banner blockquote {
-    border-left-color: rgba(255, 255, 255, 0.25); }
-  #banner code {
-    background: rgba(255, 255, 255, 0.075);
-    border-color: rgba(255, 255, 255, 0.25); }
-  #banner hr {
-    border-bottom-color: rgba(255, 255, 255, 0.25); }
   #banner input[type="submit"],
   #banner input[type="reset"],
   #banner input[type="button"],
@@ -463,27 +456,13 @@ ul.icons {
     color: rgba(255, 255, 255, 0.4) !important; }
   #banner ul.alt li {
     border-top-color: rgba(255, 255, 255, 0.25); }
-  #banner table tbody tr {
-    border-color: rgba(255, 255, 255, 0.25); }
-    #banner table tbody tr:nth-child(2n + 1) {
-      background-color: rgba(255, 255, 255, 0.075); }
-  #banner table th {
-    color: #ffffff; }
-  #banner table thead {
-    border-bottom-color: rgba(255, 255, 255, 0.25); }
-  #banner table tfoot {
-    border-top-color: rgba(255, 255, 255, 0.25); }
-  #banner table.alt tbody tr td {
-    border-color: rgba(255, 255, 255, 0.25); }
-  #banner .highlights .content {
+  #banner .projects .content {
     background: #111111;
     box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.025); }
-  #banner .testimonials .content {
-    background: #111111;
-    box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.025); }
-    #banner .testimonials .content .credit strong {
-      color: #ce1b28; }
   #banner > .inner {
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,0.3); 
     -moz-transform: scale(1.0);
     -webkit-transform: scale(1.0);
     -ms-transform: scale(1.0);
@@ -493,8 +472,7 @@ ul.icons {
     -ms-transition: opacity 1s ease, -ms-transform 1s ease;
     transition: opacity 1s ease, transform 1s ease;
     opacity: 1;
-    position: relative;
-    z-index: 3; }
+   }
     #banner > .inner > :last-child {
       margin-bottom: 0; }
   #banner h1 {
