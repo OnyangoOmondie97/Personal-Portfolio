@@ -1347,3 +1347,17 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.show-more-btn {
+    margin-right: 10px; 
+    padding: 10px;       
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.show-more-btn:hover {
+    background-color: #ddd;
+}
