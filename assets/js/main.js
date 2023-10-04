@@ -23,7 +23,7 @@
     });
 
     // Video playback on scroll.
-    var $video = $("video");  // Ensure your video has a unique selector if there are multiple videos on the page.
+    var $video = $("video");  
     $window.on('scroll', function() {
         var videoTop = $video.offset().top;
         var windowBottom = $window.scrollTop() + $window.height();
