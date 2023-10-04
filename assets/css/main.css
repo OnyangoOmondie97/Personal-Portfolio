@@ -1361,3 +1361,7 @@ button:hover {
 .show-more-btn:hover {
     background-color: #ddd;
 }
+.show-more-btn:active {
+    transform: scale(0.95); 
+}
+
