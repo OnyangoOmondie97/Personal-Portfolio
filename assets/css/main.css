@@ -19,7 +19,7 @@ html {
 
 body {
   background: #ffffff;
-  background-image: url('../../images/banner.jpg');
+  background-image: url('../../images/bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body {
 html, body, div, h1, h2, 
 h3, h4, a, img,  i, ul, li,
 footer, header, menu, nav,
-section, audio, video {
+section, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -327,7 +327,6 @@ ul.icons {
 #banner {
   -ms-flex-align: center;
   -ms-flex-pack: center;
-  background-color: #808080;
   color: rgba(255, 255, 255, 0.5);
   -moz-align-items: center;
   -webkit-align-items: center;
@@ -341,6 +340,8 @@ ul.icons {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
+  background-clip: url
+  background-color: #000;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -352,6 +353,30 @@ ul.icons {
   position: relative;
   text-align: center;
   width: 100%; }
+#banner .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+ #banner .inner {
+    position: relative;
+    z-index: 1;
+}
+
+#banner .dark-bg {
+    background-color: #000;
+    color: #fff; 
+    padding: 20px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
   #banner input, #banner textarea {
     color: #ffffff; }
   #banner a {
@@ -565,11 +590,10 @@ ul.icons {
 
 /* About me */
 #aboutme {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #808080;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(206, 27, 40, 0.25), rgba(206, 27, 40, 0.25)), url(../../images/aboutme01.jpg);
   font-weight: bold;
   background-position: bottom;
   background-repeat: no-repeat;
