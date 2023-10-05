@@ -37,7 +37,7 @@
 
     // Text appearing word by word.
     var options = {
-        strings: ["Software Engineer", ", Security Analyst &", "Database Developers"],
+        strings: ["Software Engineer, Security Analyst & Database Developers"],
         typeSpeed: 50,
         backDelay: 500,
         backSpeed: 30,
