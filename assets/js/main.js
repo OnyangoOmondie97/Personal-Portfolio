@@ -35,16 +35,28 @@
         }
     });
 
-    // Text appearing word by word.
+    // Text appearing letter by letter.
     var options = {
         strings: ["Software Engineer, Security Analyst & Database Developers"],
         typeSpeed: 50,
         backDelay: 500,
         backSpeed: 30,
-        loop: false
+        loop: false,
+        showCursor: false,
+        startDelay: 500
     }
 
     var typed = new Typed(".inner h1", options);
+
+    // Skill boxes color change every 5 minutes.
+    var colors = ["#FF5733", "#33FF57", "#5733FF", "#33FFF1", "#FF33F5"]; // example colors
+    var currentIndex = 0;
+
+    function changeSkillsBoxColors() {
+        $('.skills-box').css('background-color', colors[currentIndex]); // assuming 'skill-box' is the class for skill boxes
+        currentIndex = (currentIndex + 1) % colors.length;
+    }
+    setInterval(changeSkillsBoxColors, 5 * 60 * 1000);  // change every 5 minutes
 
     // Menu.
     $('#menu')
