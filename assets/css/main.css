@@ -327,7 +327,7 @@ ul.icons {
 #banner {
   -ms-flex-align: center;
   -ms-flex-pack: center;
-  background-color: #111111;
+  background-color: #808080;
   color: rgba(255, 255, 255, 0.5);
   -moz-align-items: center;
   -webkit-align-items: center;
@@ -342,7 +342,6 @@ ul.icons {
   -ms-justify-content: center;
   justify-content: center;
   background-position: center;
-  background-image:url(../../images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-top: 0;
