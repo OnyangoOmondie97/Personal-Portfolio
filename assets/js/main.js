@@ -37,20 +37,34 @@
     });
 
     // Text appearing word by word.
-	var options = {
-		strings: ["Software Engineer,", "Security Analyst &", "Database Developer"],
-		typeSpeed: 50,
-		backDelay: 500,
-		ackSpeed: 30,
-		onComplete: function(self) {
-		$(".inner h1").html("Software Engineer, Security Analyst & Database Developer"); 
-			}
-	}
+    var options = {
+        strings: ["Software Engineer,", "Security Analyst &", "Database Developer"],
+        typeSpeed: 50,
+        backDelay: 500,
+        backSpeed: 30,
+        onComplete: function(self) {
+            $(".inner h1").html("Software Engineer, Security Analyst & Database Developer"); 
+        }
+    };
 	
-		var typed = new Typed(".inner h1", options);
-	
+    var typed = new Typed(".inner h1", options);
+    
+    // Determines if the given color is light
+    function isLight(color) {
+        var r, g, b, hsp;
+        
+        // Convert hex color to RGB
+        r = parseInt(color.substr(1, 2), 16);
+        g = parseInt(color.substr(3, 2), 16);
+        b = parseInt(color.substr(5, 2), 16);
+        
+        // Calculate the perceived brightness
+        hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b));
+        
+        // If perceived brightness is high, it's a light color
+        return hsp > 127.5;
+    }
 
-    // Changing the color of skill boxes every 1 minute
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';
@@ -62,12 +76,20 @@
 
     function updateSkillBoxColors() {
         $skills.each(function() {
-            $(this).css('background-color', getRandomColor());
+            var color = getRandomColor();
+            $(this).css('background-color', color);
+
+            // Check if the color is light or dark
+            if (isLight(color)) {
+                $(this).css('color', '#000');  // Set text color to black if background is light
+            } else {
+                $(this).css('color', '#FFF');  // Set text color to white if background is dark
+            }
         });
     }
 
     updateSkillBoxColors(); // First run
-    setInterval(updateSkillBoxColors, 1 * 60 * 1000); // Update every 1 minute
+    setInterval(updateSkillBoxColors, 5 * 1000); // Update every 5 seconds
 
     // Menu.
     $('#menu')
