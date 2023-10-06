@@ -89,7 +89,7 @@
     }
 
     updateSkillBoxColors(); // First run
-    setInterval(updateSkillBoxColors, 5 * 1000); // Update every 5 seconds
+    setInterval(updateSkillBoxColors, 5 * 1000); 
 
     // Menu.
     $('#menu')
